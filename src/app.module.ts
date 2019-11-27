@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
+import { KaderModule } from './kader/kader.module';
 
 @Module({
-  imports: [],
+  imports: [KaderModule],
 })
 export class AppModule { }
