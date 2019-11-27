@@ -1,13 +1,13 @@
 import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { sign } from 'jsonwebtoken';
 
-enum Provider {
+export enum Provider {
     GOOGLE = 'google'
 }
 @Injectable()
 export class AuthService {
     private readonly JWT_SECRET_KEY = '3eSugMviYfcm7OgzkE8sKmxJ';
-    constructor(/*private readonly usersService: UsersService*/) { };
+    constructor() { };
     async validateOAuthLogin(thirdPartyId: string, provider: Provider): Promise<string> {
         try {
             // You can add some registration logic here, 
