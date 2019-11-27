@@ -6,8 +6,8 @@ import { Strategy } from 'passport-google-oauth20';
 export class GoogleStrategy extends PassportStrategy(Strategy, 'google') {
     constructor() {
         super({
-            clientID: 'kambing15',
-            clientSecret: '1024',
+            clientID: '"535326091018-h5idr7sjsdnkrikb8eikg2o83sd3u6b5.apps.googleusercontent.com',
+            clientSecret: '3eSugMviYfcm7OgzkE8sKmxJ',
             callbackURL: 'http://localhost:3000/auth/google/callback',
             passReqToCallback: true,
             scope: ['profile']
