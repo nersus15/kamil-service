@@ -8,7 +8,7 @@ export enum Provider {
 export class AuthService {
     private readonly JWT_SECRET_KEY = '3eSugMviYfcm7OgzkE8sKmxJ';
     constructor() { };
-    async validateOAuthLogin(thirdPartyId: string, provider: Provider): Promise<string> {
+    async validateOAuthLogin(thirdPartyId: {}, provider: Provider): Promise<string> {
         try {
             // You can add some registration logic here, 
             // to register the user using their thirdPartyId (in this case their googleId)
